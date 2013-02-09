@@ -32,7 +32,7 @@ function roots_theme_activation_options_add_page() {
       __('Theme Activation', 'roots'),
       'edit_theme_options',
       'theme_activation_options',
-      'roots_theme_activation_options_render_page'
+      'roots_theme_activation_options_render_page_blank'
     );
   } else {
     if (is_admin() && isset($_GET['page']) && $_GET['page'] === 'theme_activation_options') {
@@ -51,8 +51,8 @@ function roots_get_default_theme_activation_options() {
     'create_front_page'               => false,
     'change_permalink_structure'      => false,
     'change_uploads_folder'           => false,
-    'create_navigation_menus'         => false,
-    'add_pages_to_primary_navigation' => false,
+    'create_navigation_menus'         => true,
+    'add_pages_to_primary_navigation' => true,
   );
 
   return apply_filters('roots_default_theme_activation_options', $default_theme_activation_options);
@@ -60,6 +60,10 @@ function roots_get_default_theme_activation_options() {
 
 function roots_get_theme_activation_options() {
   return get_option('roots_theme_activation_options', roots_get_default_theme_activation_options());
+}
+function roots_theme_activation_options_render_page_blank() {
+  echo "Thanks for installing this theme";
+
 }
 
 function roots_theme_activation_options_render_page() { ?>

@@ -13,6 +13,15 @@ function roots_setup() {
     'primary_navigation' => __('Primary Navigation', 'roots'),
   ));
 
+  //
+  $theme = get_current_theme();
+  $mods = get_option("mods_$theme");
+  $key = key($mods['nav_menu_locations']);
+  $mods['nav_menu_locations'][$key] = $menu_id;
+  update_option("mods_$theme", $mods);
+
+  
+
   // Add post thumbnails (http://codex.wordpress.org/Post_Thumbnails)
   add_theme_support('post-thumbnails');
   // set_post_thumbnail_size(150, 150, false);
