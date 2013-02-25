@@ -1,86 +1,107 @@
-/* ==========================================================================
-   Base
-   ========================================================================== */
+/* variables */
+body {
+  background: #888888;
+}
+.container {
+  background: white;
+}
+/* Header area */
+header {
+  background: white;
+  overflow: hidden;
+}
+header .top-bar nav {
+  float: right;
+  width: auto;
+}
+header .top-bar nav .nav {
+  margin-bottom: 0;
+}
+header .top-bar nav .nav a {
+  color: black;
+}
+header .top-bar .logo {
+  float: left;
+}
+header .header-panel {
+  background: url(../img/banner1.jpg) no-repeat;
+  padding: 15px;
+  width: 100%;
+  height: 300px;
+  margin: 0;
+  border-top: 0;
+  position: relative;
+}
+header .header-panel .legend {
+  bottom: 50px;
+  position: absolute;
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 25px;
+}
+header .header-panel.smaller {
+  height: 180px;
+}
+.container {
+  /* border: 1px solid #CCC; */
 
-body { }
-
-
-
-/* =============================================================================
-   Header
-   ========================================================================== */
-
-.banner { }
-
-/* Fixed Topbar Navigation */
-body.top-navbar { padding-top: 60px; }
-body.admin-bar .navbar-fixed-top { top: 28px; }
-
-
-
-/* ==========================================================================
-   Content
-   ========================================================================== */
-
-.content { }
-
-
-
-/* ==========================================================================
-   Primary Content
-   ========================================================================== */
-
-.main { }
-
-
-
-/* ==========================================================================
-   Sidebar
-   ========================================================================== */
-
-.sidebar { }
-
-
-
-/* ==========================================================================
-   Posts
-   ========================================================================== */
-
-.hentry header { }
-.hentry time { }
-.hentry .byline { }
-.hentry .entry-content { }
-.hentry footer { }
-
-
-
-/* ==========================================================================
-   Footer
-   ========================================================================== */
-
-.content-info { }
-
-
-
-/* ==========================================================================
-   WordPress Generated Classes
-   See: http://codex.wordpress.org/CSS#WordPress_Generated_Classes
-   ========================================================================== */
-
-.aligncenter { display: block; margin: 0 auto; }
-.alignleft { float: left; }
-.alignright { float: right; }
-figure.alignnone { margin-left: 0; margin-right: 0; }
-
-
-
-/* ==========================================================================
-   Media Queries
-   ========================================================================== */
-
-@media (max-width: 979px) {
-  /* Fix top padding when using the responsive grid with the fixed topbar */
-  body.top-navbar {
-    padding-top: 0;
-  }
+}
+.page-header {
+  padding: 25px;
+  margin: 0;
+  border-bottom: 1px solid #EEE;
+  background: black;
+  color: white;
+}
+/* main area */
+.content-area h2 {
+  margin-top: 0;
+}
+.content-area .col p {
+  padding: 25px;
+}
+.content-area .col h2,
+.content-area .col h3,
+.content-area .col h4 {
+  padding-left: 25px;
+  margin-bottom: 20px;
+}
+.content-area .col h2 {
+  padding-top: 15px;
+}
+.content-area .col img {
+  padding-left: 25px;
+}
+.content-area aside {
+  padding: 15px 0 0 0;
+}
+.content-area .food-menu {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  height: 350px;
+  overflow-y: auto;
+}
+footer {
+  margin-bottom: 50px;
+}
+footer .container p {
+  padding: 25px;
+  background: #460d10;
+  margin: 0;
+  color: white;
+}
+/* Bootstrap custom */
+.nav-pills > .active > a,
+.nav-pills > .active > a:hover {
+  background-color: #f9c65a;
+  border-radius: 0;
+  color: white;
+}
+.nav > li > a:hover {
+  background-color: #f9c65a;
+}
+.nav-pills > li > a {
+  border-radius: 0;
+  padding: 15px 25px;
+  background: #EEE;
 }

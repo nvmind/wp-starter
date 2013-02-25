@@ -6,7 +6,7 @@
 //add_theme_support('root-relative-urls');    // Enable relative URLs
 add_theme_support('rewrites');              // Enable URL rewrites
 add_theme_support('h5bp-htaccess');         // Enable HTML5 Boilerplate's .htaccess
-add_theme_support('bootstrap-top-navbar');  // Enable Bootstrap's fixed navbar
+//add_theme_support('bootstrap-top-navbar');  // Enable Bootstrap's fixed navbar
 add_theme_support('bootstrap-gallery');     // Enable Bootstrap's thumbnails component on [gallery]
 add_theme_support('nice-search');           // Enable /?s= to /search/ redirect
 
@@ -64,7 +64,8 @@ function roots_display_sidebar() {
      * Any of these page templates that return true won't show the sidebar
      */
     array(
-      'page-custom.php'
+      'page',
+      'page-menu.php'
     )
   );
 

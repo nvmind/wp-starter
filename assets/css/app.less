@@ -1,0 +1,155 @@
+
+// Custom
+
+/* variables */
+
+@std-padding : 25px;
+@main-bg : #888;
+
+
+body {
+	background: @main-bg;
+}
+
+.container {
+	background: white;
+}
+
+/* Header area */
+
+header {
+	background: white;
+	overflow: hidden;
+	.top-bar {
+		
+		
+		nav {
+			float: right;
+			width: auto;
+
+			.nav {
+				margin-bottom: 0;
+				
+				a {
+
+					color: black;
+				}
+			}	
+		}	
+		.logo {
+			float: left;
+
+		}
+	}
+
+
+
+	.header-panel {
+		background: url(../img/banner1.jpg) no-repeat;
+		padding: 15px;
+		width: 100%;
+		height: 300px;
+		margin: 0;
+		border-top: 0;
+		position: relative;
+		.legend {
+			bottom: 50px;
+			position: absolute;
+			color: white;
+			background: rgba(0, 0, 0, .5);
+			padding: @std-padding;
+		}
+		&.smaller {
+			height: 180px;
+		}
+	}
+
+
+}
+
+
+.container {
+	/* border: 1px solid #CCC; */
+}
+
+
+.page-header {
+	padding: @std-padding;
+	margin: 0;
+	border-bottom: 1px solid #EEE;
+	background: black;
+	color: white;
+}
+
+/* main area */
+
+.content-area {
+	h2 {
+		margin-top : 0;
+	}
+	.col {
+		p {
+		padding: @std-padding;
+		}
+		h2, h3, h4 {
+			padding-left: @std-padding;
+			margin-bottom: 20px;
+		}
+		h2 {
+			padding-top: 15px;
+		
+		}
+
+		img {
+			padding-left: @std-padding;
+		}
+	}
+	aside {
+		padding: 15px 0 0 0;
+	}
+	.food-menu {
+		margin-top: @std-padding;
+		margin-bottom: @std-padding;
+		height: 350px;
+		overflow-y: auto;
+	}
+}
+
+
+aside {
+	
+}
+
+
+footer {
+	.container p {
+		padding: @std-padding;
+		background: #460d10;
+		margin: 0;
+		color: white;
+	}
+	margin-bottom: 50px;
+}
+
+
+
+
+/* Bootstrap custom */
+
+.nav-pills>.active>a, .nav-pills>.active>a:hover {
+	background-color: #f9c65a;
+	border-radius: 0;
+	color: white;	
+	li.active a {
+	}
+}
+
+.nav>li>a:hover {
+	background-color: #f9c65a;
+}
+
+.nav-pills>li>a {
+	border-radius: 0;
+	padding: 15px 25px;
+	background: #EEE;
+}
