@@ -1,44 +1,93 @@
 
 // Custom
 
+@import "elements.less";
+
+
 /* variables */
 
 @std-padding : 25px;
+@legend-padding : 20px;
+@spacer-padding : 10px;
 @main-bg : #888;
+@sec-color : #9d382a;
+@highlight : #BC783B;
+@header-color : #9d382a;
+@third-color : #cea255;
 
 
 body {
 	background: @main-bg;
+	font-family: 'Oxygen', sans-serif;
+	font-size: 13px;
+	line-height: 22px;
+	margin-top: 20px;
 }
 
-.container {
-	background: white;
+h1, h2, h3, h4 {
+	
+	/*font-family: 'Poiret One', cursive;
+	font-family: 'Handlee', cursive;*/
+	font-family: 'Snippet', sans-serif;
+
 }
+
+ul {
+	list-style: none;
+}
+
+.spacer {
+	display : inline-block;
+	height: @spacer-padding;
+}
+
+
+.container {
+	.wrap {
+			background: white;
+	}
+}
+
+
+
+.alpha { margin-left: 0; }
+.omega { margin-right: 0; }
 
 /* Header area */
 
 header {
-	background: white;
 	overflow: hidden;
 	.top-bar {
-		
-		
+		height: 50px;
+		.border-radius(15px, 15px, 0, 0);
+		background: #000;
+
 		nav {
 			float: right;
 			width: auto;
+			right: 10px;
+			position: relative;
 
 			.nav {
 				margin-bottom: 0;
 				
 				a {
-
-					color: black;
+					color: white;
+					background: none;
+					font-size: 13px;
+					text-transform: uppercase;
+				}
+				a:hover {
+					/*background: @highlight;*/
+					text-decoration: none;
+					border-bottom: 4px solid @highlight;
+					color: white;
 				}
 			}	
 		}	
 		.logo {
 			float: left;
-
+			margin-left: 15px;
 		}
 	}
 
@@ -52,12 +101,15 @@ header {
 		margin: 0;
 		border-top: 0;
 		position: relative;
+
 		.legend {
 			bottom: 50px;
+			width: 500px;
 			position: absolute;
 			color: white;
-			background: rgba(0, 0, 0, .5);
-			padding: @std-padding;
+			background: rgba(0, 0, 0, .4);
+			padding : @legend-padding;
+			.rounded(15px);
 		}
 		&.smaller {
 			height: 180px;
@@ -68,46 +120,67 @@ header {
 }
 
 
-.container {
-	/* border: 1px solid #CCC; */
-}
 
 
 .page-header {
-	padding: @std-padding;
+	padding: 0;
+	height: 7px;
 	margin: 0;
 	border-bottom: 1px solid #EEE;
-	background: black;
+	background: @third-color;
 	color: white;
+	line-height: 20px;
 }
+
+.col {
+	padding: @std-padding;
+}
+
+
 
 /* main area */
 
 .content-area {
-	h2 {
+	h2, h3 {
 		margin-top : 0;
 	}
-	.col {
+
+	&.home {
 		p {
-		padding: @std-padding;
-		}
-		h2, h3, h4 {
-			padding-left: @std-padding;
-			margin-bottom: 20px;
-		}
-		h2 {
-			padding-top: 15px;
-		
+			
 		}
 
-		img {
-			padding-left: @std-padding;
+		h2 {
+			padding-top: 15px;
+		}
+		h3 { 
+			color: @header-color;
+			font-weight: 100;
+			font-size: 23px;
+		}
+		ul {
+
 		}
 	}
-	aside {
-		padding: 15px 0 0 0;
-	}
+
+
+
+
 	.food-menu {
+
+		ul {
+			li {
+				margin-bottom: @std-padding;
+				h4 {
+					margin-top: 0;
+				}
+				p {
+					padding-top: 5px;
+					padding-bottom: 5px;
+				}
+			}
+		}
+
 		margin-top: @std-padding;
 		margin-bottom: @std-padding;
 		height: 350px;
@@ -117,19 +190,28 @@ header {
 
 
 aside {
-	
+	h3 {	
+		.cafe-icon {
+			padding-right: 8px;
+			margin-top: -13px;
+		}
+	}
 }
 
 
 footer {
 	.container p {
-		padding: @std-padding;
-		background: #460d10;
+		padding: 20px;
+		background: @sec-color;
 		margin: 0;
 		color: white;
+		.border-radius(0, 0, 15px, 15px);
 	}
 	margin-bottom: 50px;
+
 }
+
+
 
 
 
@@ -137,19 +219,22 @@ footer {
 /* Bootstrap custom */
 
 .nav-pills>.active>a, .nav-pills>.active>a:hover {
-	background-color: #f9c65a;
+	background-color: none;
 	border-radius: 0;
 	color: white;	
+	border-bottom: 4px solid @highlight;
 	li.active a {
 	}
 }
-
-.nav>li>a:hover {
-	background-color: #f9c65a;
+.nav-pills>.active>a:hover {
+	background: none;
+}
+.nav>li {
+	padding: 10px 15px;
 }
 
 .nav-pills>li>a {
 	border-radius: 0;
-	padding: 15px 25px;
-	background: #EEE;
+	padding: 5px 5px;
+	
 }

@@ -3,7 +3,7 @@
   <header class="banner" role="banner">
    
     <div class="top-bar">
-      <a class="logo" href="<?php echo home_url(); ?>/"><img src="holder.js/250x50" alt="logo"></a>
+      <a class="logo" href="<?php echo home_url(); ?>/"><img src="<?php echo get_bloginfo('template_url'); ?>/inc/images/logo.png" alt="logo"></a>
       <nav class="nav-main" role="navigation">
           <?php
             if (has_nav_menu('primary_navigation')) :
@@ -14,12 +14,11 @@
     <div class="clearfix"></div>
     </div>
     <div class="header-panel">
-      <div class="legend span8">
+      <div class="legend span8 rounded">
           <h1>
-            <?php echo roots_title(); ?>
+            Delectable Dishes
           </h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+          <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Sed posuere consectetur est at lobortis. Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
       </div>   
     </div>
 

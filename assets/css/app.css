@@ -1,27 +1,90 @@
+/*---------------------------------------------------
+    LESS Elements 0.9
+  ---------------------------------------------------
+    A set of useful LESS mixins
+    More info at: http://lesselements.com
+  ---------------------------------------------------*/
 /* variables */
 body {
   background: #888888;
+  font-family: 'Oxygen', sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  margin-top: 20px;
 }
-.container {
+h1,
+h2,
+h3,
+h4 {
+  /*font-family: 'Poiret One', cursive;
+	font-family: 'Handlee', cursive;*/
+
+  font-family: 'Snippet', sans-serif;
+}
+ul {
+  list-style: none;
+}
+.spacer {
+  display: inline-block;
+  height: 10px;
+}
+.container .wrap {
   background: white;
+}
+.alpha {
+  margin-left: 0;
+}
+.omega {
+  margin-right: 0;
 }
 /* Header area */
 header {
-  background: white;
   overflow: hidden;
+}
+header .top-bar {
+  height: 50px;
+  -webkit-border-top-right-radius: 15px;
+  -webkit-border-bottom-right-radius: 0;
+  -webkit-border-bottom-left-radius: 0;
+  -webkit-border-top-left-radius: 15px;
+  -moz-border-radius-topright: 15px;
+  -moz-border-radius-bottomright: 0;
+  -moz-border-radius-bottomleft: 0;
+  -moz-border-radius-topleft: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 15px;
+  -moz-background-clip: padding-box;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  background: #000;
 }
 header .top-bar nav {
   float: right;
   width: auto;
+  right: 10px;
+  position: relative;
 }
 header .top-bar nav .nav {
   margin-bottom: 0;
 }
 header .top-bar nav .nav a {
-  color: black;
+  color: white;
+  background: none;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+header .top-bar nav .nav a:hover {
+  /*background: @highlight;*/
+
+  text-decoration: none;
+  border-bottom: 4px solid #bc783b;
+  color: white;
 }
 header .top-bar .logo {
   float: left;
+  margin-left: 15px;
 }
 header .header-panel {
   background: url(../img/banner1.jpg) no-repeat;
@@ -34,46 +97,42 @@ header .header-panel {
 }
 header .header-panel .legend {
   bottom: 50px;
+  width: 500px;
   position: absolute;
   color: white;
-  background: rgba(0, 0, 0, 0.5);
-  padding: 25px;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
 }
 header .header-panel.smaller {
   height: 180px;
 }
-.container {
-  /* border: 1px solid #CCC; */
-
-}
 .page-header {
-  padding: 25px;
+  padding: 0;
+  height: 7px;
   margin: 0;
   border-bottom: 1px solid #EEE;
-  background: black;
+  background: #cea255;
   color: white;
+  line-height: 20px;
 }
-/* main area */
-.content-area h2 {
-  margin-top: 0;
-}
-.content-area .col p {
+.col {
   padding: 25px;
 }
-.content-area .col h2,
-.content-area .col h3,
-.content-area .col h4 {
-  padding-left: 25px;
-  margin-bottom: 20px;
+/* main area */
+.content-area h2,
+.content-area h3 {
+  margin-top: 0;
 }
-.content-area .col h2 {
+.content-area.home h2 {
   padding-top: 15px;
 }
-.content-area .col img {
-  padding-left: 25px;
-}
-.content-area aside {
-  padding: 15px 0 0 0;
+.content-area.home h3 {
+  color: #9d382a;
+  font-weight: 100;
+  font-size: 23px;
 }
 .content-area .food-menu {
   margin-top: 25px;
@@ -81,27 +140,59 @@ header .header-panel.smaller {
   height: 350px;
   overflow-y: auto;
 }
+.content-area .food-menu ul li {
+  margin-bottom: 25px;
+}
+.content-area .food-menu ul li h4 {
+  margin-top: 0;
+}
+.content-area .food-menu ul li p {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+aside h3 .cafe-icon {
+  padding-right: 8px;
+  margin-top: -13px;
+}
 footer {
   margin-bottom: 50px;
 }
 footer .container p {
-  padding: 25px;
-  background: #460d10;
+  padding: 20px;
+  background: #9d382a;
   margin: 0;
   color: white;
+  -webkit-border-top-right-radius: 0;
+  -webkit-border-bottom-right-radius: 15px;
+  -webkit-border-bottom-left-radius: 15px;
+  -webkit-border-top-left-radius: 0;
+  -moz-border-radius-topright: 0;
+  -moz-border-radius-bottomright: 15px;
+  -moz-border-radius-bottomleft: 15px;
+  -moz-border-radius-topleft: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 0;
+  -moz-background-clip: padding-box;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
 }
 /* Bootstrap custom */
 .nav-pills > .active > a,
 .nav-pills > .active > a:hover {
-  background-color: #f9c65a;
+  background-color: none;
   border-radius: 0;
   color: white;
+  border-bottom: 4px solid #bc783b;
 }
-.nav > li > a:hover {
-  background-color: #f9c65a;
+.nav-pills > .active > a:hover {
+  background: none;
+}
+.nav > li {
+  padding: 10px 15px;
 }
 .nav-pills > li > a {
   border-radius: 0;
-  padding: 15px 25px;
-  background: #EEE;
+  padding: 5px 5px;
 }
